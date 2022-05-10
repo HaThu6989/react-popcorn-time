@@ -5,8 +5,16 @@ function Movie(props) {
       <p>
         Year: {props.year} <br />
         Rating: {props.rating} <br />
-        {props.rating > 8 && <span>RECOMMENDED</span>}
+        {props.rating > 8 ? <span>RECOMMENDED</span> : <span>SKIP</span>}
+        <span>RECOMMENDED</span> : <span>SKIP</span>
       </p>
+      <div>
+        {props.image ? (
+          <img src={props.image} />
+        ) : (
+          <img placeholder={props.title} />
+        )}
+      </div>
     </div>
   );
 }
